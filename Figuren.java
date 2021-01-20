@@ -53,6 +53,9 @@ public class Figuren extends PApplet
     //***** Zusatzaufgabe bzw. Hausaufgabe *************
     public void zeichneBildA() {
         // ***** hier kommen deine Anweisungen hin ************
+        ellipse(250, 250, 300, 300);
+        rect(100, 400, 300, 300);
+        triangle(250, 700, 100, 900, 400, 900);
         
 
         // ***** Ende der eigenen Anweisungen **********  
