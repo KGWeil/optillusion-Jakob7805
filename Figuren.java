@@ -17,10 +17,30 @@ public class Figuren extends PApplet
     @Override
     public void settings()
     {
-        size(500, 350); // Festlegen der Fenstergröße
+        size(500, 1000); // Festlegen der Fenstergröße
     }        
 
     public void zeichneBildC() {
+        //oben abstand 100, unten 200
+        //mitte 100
+        rect(50, 50, 400, 400);
+        ellipse(250, 250, 350, 350);
+        ellipse(250, 250, 250, 250);
+        ellipse(250, 250, 150, 150);
+        
+        ellipse(250, 700, 400, 400);
+        
+        
+        rect(110, 560, 280, 280); //erstes Rechteck
+        
+        rect(140, 590, 220, 220); //zweites Recheck
+        
+        rect(170, 620, 160, 160); //drittes Rechteck
+        
+        
+        
+        
+        
         // Zeichne dir zunächst eine Skizze auf ein Blatt Papier und überlege dir, welche
         // Werte du den Methoden rect(x,y,b,h) und ellipse(x,y,b,h) übergeben musst, 
         // dass Bild C gezeichnet wird
@@ -33,6 +53,7 @@ public class Figuren extends PApplet
     //***** Zusatzaufgabe bzw. Hausaufgabe *************
     public void zeichneBildA() {
         // ***** hier kommen deine Anweisungen hin ************
+        
 
         // ***** Ende der eigenen Anweisungen **********  
     }
@@ -45,8 +66,8 @@ public class Figuren extends PApplet
     @Override
     public void setup()
     {
-        zeichneBildC(); // Aufruf deiner Methode
-        // zeichneBildA();
+        // zeichneBildC(); // Aufruf deiner Methode
+        zeichneBildA();
     }
 
     /**
