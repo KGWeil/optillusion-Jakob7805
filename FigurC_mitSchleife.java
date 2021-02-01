@@ -11,7 +11,7 @@ import processing.core.PApplet;
 public class FigurC_mitSchleife extends PApplet
 
 {   
-    public static short bild = 2; //Neue Variable, die das Bild anzeigt
+    protected static short bild = 2; //Neue Variable, die das Bild anzeigt
     /**
      * settings() Methode 
      * Fenstergröße size(int width, int height) und smooth(int level) muss hier eingestellt werden.
@@ -33,7 +33,7 @@ public class FigurC_mitSchleife extends PApplet
 
     }        
 
-    public void zeichneBildB() 
+    private void zeichneBildB() 
     {
         for (int i = 0; i < 10; i++)
         {
@@ -41,12 +41,12 @@ public class FigurC_mitSchleife extends PApplet
         }
     }
 
-    public void zeichneBildC()
+    private void zeichneBildC()
     {
        
     }
 
-    public void zeichneBildD()
+    private void zeichneBildD()
     {
      for (int i = 0; i < 10; i++)
         {
