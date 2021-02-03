@@ -53,7 +53,7 @@ public class FigurC_mitSchleife extends PApplet
      circle(125, 125, 10 * i + 10);
      }
     }
-
+    
     /**
      * Die setup() Methode wird einmal aufgerufen, wenn das Programm startet.
      * Hier werden Einstellungen wie die Hintergrundfarbe vorgenommen
