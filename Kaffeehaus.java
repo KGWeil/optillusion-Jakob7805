@@ -5,6 +5,7 @@ public class Kaffeehaus extends PApplet
 {       
 
     public int s = 40;
+    int[] abstaende = {10, 20, 30, 20, 10, 20, 30, 20, 10};
     @Override
     public void settings()
     {
@@ -26,7 +27,7 @@ public class Kaffeehaus extends PApplet
         {
             for (int i = 0; i < 8; i++)
             {
-                rect(10 + i * 2 * s, j * 40, s, s);
+                rect(abstaende[j] + i * 2 * s, j * 40, s, s);
             }
         }
         
