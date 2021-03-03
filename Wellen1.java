@@ -67,32 +67,30 @@ public class Wellen1 extends PApplet
         int y = 10;
         boolean links = true;
         int farbe = 0;
-        
-        
+
         for(int j = 0; j < 4; j++)
         {
-            
-        for(int i = 0; i < 8; i++)
-        {
-            zeichneQuadrat(x +s * i, y , farbe, links);
-            
-            farbe = (i%2 == 0)? 255:0;
 
-            
+            for(int i = 0; i < 8; i++)
+            {
+                zeichneQuadrat(x +s * i, y , farbe, links);
+
+                farbe = 255 - farbe;
+
+            }
+            farbe = 255 - farbe;
+            links = !links;
+            zeichneLinien(y);
+            y = y + 30;
+
         }
-        
-        if(links == true){links = false;} else{links = true;}
-        zeichneLinien(y);
-        y = y + 30;
-        
-        
     }
-}
+
     public void zeichneLinien(int y)
     {
-       stroke(127, 255, 0);
-       line(0, y, 260, y);
-}
+        stroke(127, 255, 0);
+        line(0, y, 260, y);
+    }
 
     /**
      * Die draw() Methode wird nach der setup() Methode aufgerufen
@@ -103,7 +101,7 @@ public class Wellen1 extends PApplet
     public void draw()
     {
 
-}
+    }
 
     /**
      * Mit der main()-Methode wird das Programm gestartet.
