@@ -19,7 +19,7 @@ public class Wellen1 extends PApplet
     @Override
     public void settings()
     {
-        size(500,500);
+        size(260,260);
     }        
 
     /**
@@ -30,12 +30,7 @@ public class Wellen1 extends PApplet
     @Override
     public void setup()
     {
-    zeichneQuadrat( 10, 10, 255, true );
-    }
-    
-    public int betrag(int x)
-    {
-        if(x < 0) {return -x;}else{return x;}
+        alleQuadrate();
     }
 
     /**
@@ -48,10 +43,45 @@ public class Wellen1 extends PApplet
      */
     public void zeichneQuadrat(int x, int y, int farbwert, boolean links)
     {
-    int farbekreis = betrag(farbwert - 255);
-    fill( farbwert );
-    rect(x, y, s, s);
+        fill( farbwert );
+        rect(x, y, s, s);
+        ellipseMode(CORNERS);
+        if ( farbwert == 255 ) {  
+            fill( 0 ); 
+        } else {  
+            fill( 255 ); 
+        }
+        int d = s/4;
+        if ( links ) {
+            ellipse( x, y, x+d, y+d );  
+            ellipse( x, y + 3*d, x+d, y+s ); 
+        } else {
+            ellipse( x + 3*d, y, x+s, y+d );  
+            ellipse( x + 3*d, y + 3*d, x+ s, y+s );
+        }
     }
+
+    public void alleQuadrate()
+    {
+        int x = 10;
+        int y = 10;
+        boolean links = true;
+        int farbe;
+        
+        for(int j = 0; j < 8; j++)
+        {
+        for(int i = 0; i < 8; i++)
+        {
+            
+            
+            farbe = (i%2 == 0)? 255:0;
+
+            zeichneQuadrat(x +s * i, y , farbe, links);
+        }
+        if(links == true){links = false;} else{links = true;}
+        y = y + 30;
+    }
+}
 
     /**
      * Die draw() Methode wird nach der setup() Methode aufgerufen
