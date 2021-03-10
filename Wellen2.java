@@ -19,6 +19,7 @@ public class Wellen2 extends PApplet
     public void settings()
     {
         size(1200,1200);
+        
     }        
 
     /**
@@ -48,18 +49,28 @@ public class Wellen2 extends PApplet
     
     }
     }
+    /**
+     * Methode zeichneQuadrat
+     *
+     * @param x x-position
+     * @param y Ein Parameter
+     * @param s Ein Parameter
+     * @param modus Ein Parameter
+     */
     private void zeichneQuadrat(int x, int y, int s, boolean modus)
     {
         if(modus)
         {
             fill(0, 255, 0);
+            noStroke();
             int sn = s - 10;
             rect(x + 5, y + 5, sn, sn);
         }else
         {
             fill(255, 255, 255);
             stroke(0, 255, 0);
-            rect(x, y, s, s);
+            strokeWeight(5);
+            rect(x , y , s-2, s-2);
         }
     }
     
