@@ -44,6 +44,8 @@ public class Wellen2 extends PApplet
     }
     y = 100 * j;
     modus = !modus;
+    x = 0;
+    
     }
     }
     private void zeichneQuadrat(int x, int y, int s, boolean modus)
